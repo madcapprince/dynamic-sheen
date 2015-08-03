@@ -1,0 +1,95 @@
+@import "compass";
+
+body{background:black;color:lightblue;font-family:Georgia;}
+.sheen-holder{
+	position:relative;
+	
+}
+.sheen{
+	color: white;  /* Fallback: assume this color ON TOP of image */
+	display: inline-block;
+	position:absolute;
+	float:left;
+	top:0px;
+	left:0px;
+	width: -webkit-fit-content;
+	
+}
+.sheen-text{
+	font-family:'Helvetica';
+	font-weight:bold;
+	font-size:30px;
+}
+
+#sheen-glow {
+	
+	
+	
+	color:white;
+	
+	/*background: -webkit-linear-gradient(transparent, transparent), url(http://portfolio.queenofwhisks.com/demo/pattern/waves.gif);
+	 background: -o-linear-gradient(transparent, transparent);*/
+	 
+	background: rgba(255,255,255,0);
+	background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 41%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 95%, rgba(255,255,255,0) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(41%, rgba(255,255,255,0)), color-stop(55%, rgba(255,255,255,1)), color-stop(95%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 41%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 95%, rgba(255,255,255,0) 100%);
+	background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 41%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 95%, rgba(255,255,255,0) 100%);
+	background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 41%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 95%, rgba(255,255,255,0) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 41%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 95%, rgba(255,255,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+	
+	background-size: 200% 100%;
+	
+	background-repeat:no-repeat;
+	background-position: 50% 0;
+	width:auto;
+		
+	background-clip: text;
+	-webkit-background-clip: text;
+	text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+	
+	animation: sheenAnimation 3s infinite;
+	-webkit-animation: sheenAnimation 3s infinite;
+	-moz-animation: sheenAnimation 3s infinite;
+}
+
+#sheen-base {
+	background:lightblue;
+
+	text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+	
+	background-clip: text;
+	-webkit-background-clip: text;
+	 
+	 
+}
+
+@keyframes sheenAnimation { 
+    0%,10%{background-position:200% 0%}
+    100%{background-position:-100% 0%}
+}
+
+@-webkit-keyframes sheenAnimation { 
+    0%,10%{background-position:200% 0%}
+    100%{background-position:-100% 0%}
+}
+
+@-moz-keyframes sheenAnimation { 
+    0%,10%{background-position:200% 0%}
+    100%{background-position:-100% 0%}
+}
+
+a{
+	text-decoration:none;
+}
+
+a .sheen{
+	*background-color:red!important;
+}
+
+a #sheen-base{
+	background-color:red!important;
+}

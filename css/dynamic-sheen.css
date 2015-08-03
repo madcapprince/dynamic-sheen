@@ -1,0 +1,104 @@
+/* line 3, ../sass/dynamic-sheen.scss */
+body {
+  background: black;
+  color: lightblue;
+  font-family: Georgia;
+}
+
+/* line 4, ../sass/dynamic-sheen.scss */
+.sheen-holder {
+  position: relative;
+}
+
+/* line 8, ../sass/dynamic-sheen.scss */
+.sheen {
+  color: white;
+  /* Fallback: assume this color ON TOP of image */
+  display: inline-block;
+  position: absolute;
+  float: left;
+  top: 0px;
+  left: 0px;
+  width: -webkit-fit-content;
+}
+
+/* line 18, ../sass/dynamic-sheen.scss */
+.sheen-text {
+  font-family: 'Helvetica';
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* line 24, ../sass/dynamic-sheen.scss */
+#sheen-glow {
+  color: white;
+  /*background: -webkit-linear-gradient(transparent, transparent), url(http://portfolio.queenofwhisks.com/demo/pattern/waves.gif);
+   background: -o-linear-gradient(transparent, transparent);*/
+  background: rgba(255, 255, 255, 0);
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 41%, white 55%, white 95%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(41%, rgba(255, 255, 255, 0)), color-stop(55%, white), color-stop(95%, white), color-stop(100%, rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 41%, white 55%, white 95%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 41%, white 55%, white 95%, rgba(255, 255, 255, 0) 100%);
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 41%, white 55%, white 95%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 41%, #ffffff 55%, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  width: auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: sheenAnimation 3s infinite;
+  -webkit-animation: sheenAnimation 3s infinite;
+  -moz-animation: sheenAnimation 3s infinite;
+}
+
+/* line 58, ../sass/dynamic-sheen.scss */
+#sheen-base {
+  background: lightblue;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+@keyframes sheenAnimation {
+  0%,10% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
+}
+@-webkit-keyframes sheenAnimation {
+  0%,10% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
+}
+@-moz-keyframes sheenAnimation {
+  0%,10% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
+}
+/* line 85, ../sass/dynamic-sheen.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 89, ../sass/dynamic-sheen.scss */
+a .sheen {
+  *background-color: red !important;
+}
+
+/* line 93, ../sass/dynamic-sheen.scss */
+a #sheen-base {
+  background-color: red !important;
+}

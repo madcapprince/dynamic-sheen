@@ -57,11 +57,13 @@
 			return source;
 		}
 		
-		var myContent = document.getElementById(this.options.id).innerHTML;
-		var pattern = "&nbsp;",
-	    re = new RegExp(pattern, "g");
-		myContent = myContent.replace(re, " ");
-		this.options.content = myContent;
+		var origContent = document.getElementById(this.options.id).innerHTML,
+			replacedContent = origContent,//document.getElementById(this.options.id).innerHTML;
+			pattern = "&nbsp;",
+			re = new RegExp(pattern, "g");
+		
+		replacedContent = origContent.replace(re, " ");
+		this.options.content = replacedContent;
 		
 		// console.log('this',document.getElementById(this.options.id).innerHTML)
 		
@@ -75,7 +77,7 @@
 			var sheenHolder = document.getElementById(this.options.id);
 			this.sheen = document.createElement(this.options.node);
 			this.sheen.className = this.options.type + ' ' + this.options.textClass;
-			this.sheen.innerHTML = this.options.content;
+			this.sheen.innerHTML = origContent;//this.options.content;
 			if (this.options.type == 'text-sheen') this.sheen.style.backgroundColor = this.options.baseColor;
 			
 			sheenHolder.appendChild(this.sheen);

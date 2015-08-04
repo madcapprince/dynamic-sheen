@@ -26,6 +26,16 @@ body{background:black;}
 	color:white;
 }
 
+@mixin modernAnimation{
+	-webkit-animation-name: sheenAnimation; /* Chrome, Safari, Opera */
+	animation-name: sheenAnimation;
+}
+
+.fallBackAnimation{
+	-webkit-animation-name: colorAnimation; /* Chrome, Safari, Opera */
+	animation-name: colorAnimation;
+}
+
 .sheen-glow {
 	
 	color:white;
@@ -47,7 +57,7 @@ body{background:black;}
 	opacity:.95;
 	
 	background-repeat:no-repeat;
-	background-position: 50% 0;
+	background-position: -50% 0;
 	
 	width:auto;
 		
@@ -56,13 +66,27 @@ body{background:black;}
 	text-fill-color: transparent;
 	-webkit-text-fill-color: transparent;
 	
-	-webkit-animation-name: sheenAnimation; /* Chrome, Safari, Opera */
-	animation-name: sheenAnimation;
+//	visibility:hidden;
+	
+	
 	&:before{
 		content:attr(data-content);
 	}
 	
+	
+	
 }
+
+.hover{
+	cursor:pointer;
+	&:hover{
+		@include modernAnimation;
+		-webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
+		animation-iteration-count: 1;
+//		visibility:visible;
+	}
+}
+
 
 .slow{
 	-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
@@ -75,8 +99,11 @@ body{background:black;}
 }
 
 .infinite{
+	@include modernAnimation;
 	-webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
 	animation-iteration-count: infinite;
+	
+//	visibility:visible;
 }
 
 .sheen-base {
@@ -104,6 +131,12 @@ body{background:black;}
 @-moz-keyframes sheenAnimation { 
     0%,10%{background-position:200% 0%}
     100%{background-position:-100% 0%}
+}
+
+@-webkit-keyframes colorAnimation { 
+	0% { color: red; }
+	50% { color: blue; }
+	100% { color: red; }
 }
 
 a{

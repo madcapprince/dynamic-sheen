@@ -36,7 +36,7 @@
 			baseColor: '#ff00cc', //color of the text under the glow
 			sheenColor: '#ffffff',
 			speed:'slow', // fast or slow
-			repeat:'infinite' // number or 'infinite'
+			repeat:'infinite' // 'hover' or 'infinite'
 		}
 	
 		// Create options by extending defaults with the passed in arugments

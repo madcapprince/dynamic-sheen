@@ -60,13 +60,14 @@ body {
 /* line 69, ../sass/dynamic-sheen.scss */
 .sheen-glow:before {
   content: attr(data-content);
+  margin-right: -1%;
 }
 
-/* line 79, ../sass/dynamic-sheen.scss */
+/* line 80, ../sass/dynamic-sheen.scss */
 .hover {
   cursor: pointer;
 }
-/* line 81, ../sass/dynamic-sheen.scss */
+/* line 82, ../sass/dynamic-sheen.scss */
 .hover:hover {
   -webkit-animation-name: sheenAnimation;
   /* Chrome, Safari, Opera */
@@ -76,35 +77,35 @@ body {
   animation-iteration-count: 1;
 }
 
-/* line 90, ../sass/dynamic-sheen.scss */
+/* line 91, ../sass/dynamic-sheen.scss */
 .slow {
   -webkit-animation-duration: 4s;
   /* Chrome, Safari, Opera */
   animation-duration: 4s;
 }
 
-/* line 95, ../sass/dynamic-sheen.scss */
+/* line 96, ../sass/dynamic-sheen.scss */
 .fast {
   -webkit-animation-duration: 2s;
   /* Chrome, Safari, Opera */
   animation-duration: 2s;
 }
 
-/* line 100, ../sass/dynamic-sheen.scss */
+/* line 101, ../sass/dynamic-sheen.scss */
 .superslow {
   -webkit-animation-duration: 6s;
   /* Chrome, Safari, Opera */
   animation-duration: 6s;
 }
 
-/* line 105, ../sass/dynamic-sheen.scss */
+/* line 106, ../sass/dynamic-sheen.scss */
 .superfast {
   -webkit-animation-duration: 1s;
   /* Chrome, Safari, Opera */
   animation-duration: 1s;
 }
 
-/* line 110, ../sass/dynamic-sheen.scss */
+/* line 111, ../sass/dynamic-sheen.scss */
 .infinite {
   -webkit-animation-name: sheenAnimation;
   /* Chrome, Safari, Opera */
@@ -114,7 +115,7 @@ body {
   animation-iteration-count: infinite;
 }
 
-/* line 118, ../sass/dynamic-sheen.scss */
+/* line 119, ../sass/dynamic-sheen.scss */
 .sheen-base {
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
@@ -122,7 +123,7 @@ body {
   -webkit-background-clip: text;
 }
 
-/* line 130, ../sass/dynamic-sheen.scss */
+/* line 131, ../sass/dynamic-sheen.scss */
 .text-sheen {
   background-clip: text;
   -webkit-background-clip: text;
@@ -130,13 +131,13 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* line 137, ../sass/dynamic-sheen.scss */
+/* line 138, ../sass/dynamic-sheen.scss */
 .button-sheen {
   width: 100%;
   height: 100%;
 }
 
-/* line 142, ../sass/dynamic-sheen.scss */
+/* line 143, ../sass/dynamic-sheen.scss */
 .sheenButton {
   overflow: hidden;
   width: auto;
@@ -148,7 +149,7 @@ body {
   border: 1px solid white;
 }
 
-/* line 153, ../sass/dynamic-sheen.scss */
+/* line 154, ../sass/dynamic-sheen.scss */
 .sheenButtonRound {
   overflow: hidden;
   width: auto;
@@ -164,7 +165,7 @@ body {
   border-radius: 25px;
 }
 
-/* line 166, ../sass/dynamic-sheen.scss */
+/* line 167, ../sass/dynamic-sheen.scss */
 .sheenButtonImage {
   overflow: hidden;
   width: auto;
@@ -215,17 +216,17 @@ body {
     color: red;
   }
 }
-/* line 200, ../sass/dynamic-sheen.scss */
+/* line 201, ../sass/dynamic-sheen.scss */
 a {
   text-decoration: none;
 }
 
-/* line 204, ../sass/dynamic-sheen.scss */
+/* line 205, ../sass/dynamic-sheen.scss */
 a .sheen {
   *background-color: red !important;
 }
 
-/* line 208, ../sass/dynamic-sheen.scss */
+/* line 209, ../sass/dynamic-sheen.scss */
 a #sheen-base {
   background-color: red !important;
 }

@@ -68,6 +68,7 @@ body{background:black;}
 	
 	&:before{
 		content:attr(data-content);
+		margin-right:-1%;
 	}
 	
 	

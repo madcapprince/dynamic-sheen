@@ -57,7 +57,12 @@
 			return source;
 		}
 		
-		this.options.content = document.getElementById(this.options.id).innerHTML;
+		var myContent = document.getElementById(this.options.id).innerHTML;
+		var pattern = "&nbsp;",
+	    re = new RegExp(pattern, "g");
+		myContent = myContent.replace(re, " ");
+		this.options.content = myContent;
+		
 		// console.log('this',document.getElementById(this.options.id).innerHTML)
 		
 		// function init(_) {

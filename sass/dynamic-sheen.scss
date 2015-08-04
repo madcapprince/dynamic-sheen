@@ -54,17 +54,14 @@ body{background:black;}
 	
 	background-size: 200% 100%;
 	
-	opacity:.95;
+	opacity:.8;
 	
 	background-repeat:no-repeat;
 	background-position: -50% 0;
 	
 	width:auto;
 		
-	background-clip: text;
-	-webkit-background-clip: text;
-	text-fill-color: transparent;
-	-webkit-text-fill-color: transparent;
+	
 	
 //	visibility:hidden;
 	
@@ -76,6 +73,8 @@ body{background:black;}
 	
 	
 }
+
+
 
 .hover{
 	cursor:pointer;
@@ -98,6 +97,16 @@ body{background:black;}
 	animation-duration: 2s;
 }
 
+.superslow{
+	-webkit-animation-duration: 6s; /* Chrome, Safari, Opera */
+	animation-duration: 6s;
+}
+
+.superfast{
+	-webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+	animation-duration: 1s;
+}
+
 .infinite{
 	@include modernAnimation;
 	-webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
@@ -116,6 +125,55 @@ body{background:black;}
 	background-clip: text;
 	-webkit-background-clip: text;
 	 
+}
+
+.text-sheen{
+	background-clip: text;
+	-webkit-background-clip: text;
+	text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+}
+
+.button-sheen{
+	width: 100%;
+	height: 100%;
+}
+
+.sheenButton{
+	overflow:hidden;
+	width:auto;
+	display:inline-block;
+	padding:10px 15px;
+	background:blue;
+	font-family:Helvetica;
+	color:white;
+	border:1px solid white;
+}
+
+.sheenButtonRound{
+	overflow:hidden;
+	width:auto;
+	display:inline-block;
+	padding:12px 9px;
+	background:green;
+	font-family:Helvetica;
+	font-weight:bold;
+	color:white;
+	border:2px solid white;
+	@include border-radius(25px);
+}
+
+.sheenButtonImage{
+	overflow:hidden;
+	width:auto;
+	display:inline-block;
+	padding: 15px 58px;
+	background:url(../img/button_bg.png) no-repeat top left;
+	background-size:cover;
+	font-family:Helvetica;
+	font-weight:bold;
+	color:white;
+	@include border-radius(25px);
 }
 
 @keyframes sheenAnimation { 

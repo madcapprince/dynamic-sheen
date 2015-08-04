@@ -19,6 +19,13 @@
 	<span class="sheen-text2">This looks pretty good when it is <span id="sheen2">glowing more and more</span> and more.</span>
 	
 	<h1 id="sheen3">poopy pants</h1>
+	
+	<div id="sheen4" class="sheenButton">CLICK HERE</div><br/><br/>
+	
+	<div id="sheen5" class="sheenButtonRound">GO</div><br/><br/>
+	
+	<div id="sheen6" class="sheenButtonImage">DOWNLOAD</div><br/><br/>
+
 	<!--
 		<div class="sheen-holder">
 		<div class="sheen-text sheen-base" id="sheen-base">GLOW</div>
@@ -51,12 +58,15 @@
 			id:'sheen',
 			//textClass:'sheen-text',
 			baseColor:'red',
+			speed:'fast',
 			node:'span'
 		});
 		
 		var glowing2 = new DynamicSheen({
 			id:'sheen2',
 			textClass:'sheen-text2',
+			speed:'slow',
+			baseColor:'blue',
 			node:'span'
 		});
 		
@@ -67,6 +77,29 @@
 			speed:'fast',
 			repeat:'hover'
 		});
+		
+		var glowing4 = new DynamicSheen({
+			id:'sheen4',
+			type: 'button-sheen',
+			speed:'fast',
+			repeat:'hover'
+		});
+		
+		var glowing5 = new DynamicSheen({
+			id:'sheen5',
+			type: 'button-sheen',
+			speed:'superfast',
+			repeat:'hover'
+		});
+		
+		var glowing6 = new DynamicSheen({
+			id:'sheen6',
+			type: 'button-sheen',
+			speed:'superfast',
+			repeat:'hover'
+		});
+		
+		
 		
 	</script>
 	

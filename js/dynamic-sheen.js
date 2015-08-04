@@ -29,13 +29,14 @@
 		
 		
 		var defaults = {
+			type: 'text-sheen', //text-sheen or button-sheen
 			id: 'default',
 			content: null,
 			textClass: '',
 			node: 'div',
 			baseColor: '#ff00cc', //color of the text under the glow
 			sheenColor: '#ffffff',
-			speed:'slow', // fast or slow
+			speed:'slow', // superfast, fast, slow, superslow
 			repeat:'infinite' // 'hover' or 'infinite'
 		}
 	
@@ -68,15 +69,15 @@
 			
 			var sheenHolder = document.getElementById(this.options.id);
 			this.sheen = document.createElement(this.options.node);
-			this.sheen.className = "sheen-base " + this.options.textClass;
+			this.sheen.className = this.options.type + ' ' + this.options.textClass;
 			this.sheen.innerHTML = this.options.content;
-			this.sheen.style.backgroundColor = this.options.baseColor;
+			if (this.options.type == 'text-sheen') this.sheen.style.backgroundColor = this.options.baseColor;
 			
 			sheenHolder.appendChild(this.sheen);
 			
 			this.sheen = document.createElement(this.options.node);
-			this.sheen.className = "sheen sheen-glow " + this.options.textClass + ' ' + this.options.speed + ' ' + this.options.repeat;
-			this.sheen.dataset.content = this.options.content;
+			this.sheen.className = "sheen sheen-glow " + this.options.type + ' ' + this.options.textClass + ' ' + this.options.speed + ' ' + this.options.repeat;
+			if (this.options.type == 'text-sheen') this.sheen.dataset.content = this.options.content;
 			//this.sheen.innerHTML = this.options.content;
 			
 			sheenHolder.appendChild(this.sheen);

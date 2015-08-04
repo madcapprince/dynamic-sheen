@@ -2,34 +2,72 @@
 <!doctype html>
 <head>
 	<title>Dynamic Sheen</title>
-
+	<link rel="stylesheet" href="css/dynamic-sheen.css" type="text/css" media="screen">
+	
+	
+	<style type="text/css" media="screen">
+	#biggerGlow::before{
+		content:'BIGGER GLOW';
+	}
+	</style>
 </head>
 
+
 <body>
-	<div class="sheen-holder">
-		<div class="sheen-text" id="sheen-base">GLOW</div>
-		<div class="sheen sheen-text" id="sheen-glow">GLOW</div>
+	<h1 id="sheen">DANGER!!</h1>
+	
+	<span class="sheen-text2">This looks pretty good when it is <span id="sheen2">glowing more and more</span> and more.</span>
+	
+	<h1 id="sheen3">poopy pants</h1>
+	<!--
+		<div class="sheen-holder">
+		<div class="sheen-text sheen-base" id="sheen-base">GLOW</div>
+		<div class="sheen sheen-text sheen-glow">GLOW</div>
 		
 	</div>
 	
+	
 	<div class="sheen-holder">
-		<div class="sheen-text" id="sheen-base">BIGGER GLOW</div>
-		<div class="sheen sheen-text" id="sheen-glow">BIGGER GLOW</div>
+		<div class="sheen-text sheen-base" id="">BIGGER GLOW</div>
+		<div class="sheen sheen-text sheen-glow" id="biggerGlow"></div>
 		
 	</div>
 	
 	<div id="placeholder">You know that clicking
 		<a href="#">
 		<span class="sheen-holder">
-			<span class="" id="sheen-base">this link</span>
-			<span class="sheen" id="sheen-glow">this link</span>
+			<span class="sheen-base">this link</span>
+			<span class="sheen sheen-glow" id="">this link</span>
 		</span></a>
 		is really tempting.
 	</div>
+		-->
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<!--<script>window.jQuery || document.write('<script src="<?php echo $path ?>js/vendor/jquery-1.11.1.min.js"><\/script>')</script> -->
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="<?php echo $path ?>js/vendor/jquery-1.11.1.min.js"><\/script>')</script> -->
 	<script src="js/dynamic-sheen.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var glowing = new DynamicSheen({
+			id:'sheen',
+			//textClass:'sheen-text',
+			baseColor:'red',
+			node:'span'
+		});
+		
+		var glowing2 = new DynamicSheen({
+			id:'sheen2',
+			textClass:'sheen-text2',
+			node:'span'
+		});
+		
+		var glowing3 = new DynamicSheen({
+			id:'sheen3',
+			node:'span',
+			baseColor:'brown',
+			speed:'fast'
+		});
+		
+	</script>
 	
 </body>
 </html>

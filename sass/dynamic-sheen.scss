@@ -1,10 +1,7 @@
 @import "compass";
 
-body{background:black;color:lightblue;font-family:Georgia;}
-.sheen-holder{
-	position:relative;
-	
-}
+body{background:black;}
+
 .sheen{
 	color: white;  /* Fallback: assume this color ON TOP of image */
 	display: inline-block;
@@ -19,11 +16,17 @@ body{background:black;color:lightblue;font-family:Georgia;}
 	font-family:'Helvetica';
 	font-weight:bold;
 	font-size:30px;
+	color:white;
 }
 
-#sheen-glow {
-	
-	
+.sheen-text2{
+	font-family:'Verdana';
+	font-weight:normal;
+	font-size:12px;
+	color:white;
+}
+
+.sheen-glow {
 	
 	color:white;
 	
@@ -41,8 +44,11 @@ body{background:black;color:lightblue;font-family:Georgia;}
 	
 	background-size: 200% 100%;
 	
+	opacity:.95;
+	
 	background-repeat:no-repeat;
 	background-position: 50% 0;
+	
 	width:auto;
 		
 	background-clip: text;
@@ -50,20 +56,38 @@ body{background:black;color:lightblue;font-family:Georgia;}
 	text-fill-color: transparent;
 	-webkit-text-fill-color: transparent;
 	
-	animation: sheenAnimation 3s infinite;
-	-webkit-animation: sheenAnimation 3s infinite;
-	-moz-animation: sheenAnimation 3s infinite;
+	-webkit-animation-name: sheenAnimation; /* Chrome, Safari, Opera */
+	animation-name: sheenAnimation;
+	&:before{
+		content:attr(data-content);
+	}
+	
 }
 
-#sheen-base {
-	background:lightblue;
+.slow{
+	-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+	animation-duration: 4s;
+}
+
+.fast{
+	-webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+	animation-duration: 2s;
+}
+
+.infinite{
+	-webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+	animation-iteration-count: infinite;
+}
+
+.sheen-base {
+	
+//	background:lightblue;
 
 	text-fill-color: transparent;
 	-webkit-text-fill-color: transparent;
 	
 	background-clip: text;
 	-webkit-background-clip: text;
-	 
 	 
 }
 

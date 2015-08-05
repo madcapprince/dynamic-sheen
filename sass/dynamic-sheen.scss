@@ -1,7 +1,7 @@
 @import "compass";
 
 $color: #ffffff;
-$opacity: .6;
+$opacity: .85;
 $color_show: rgba($color,$opacity);
 $color_hide:  rgba($color,0);
 
@@ -17,6 +17,14 @@ body{
 	top:0px;
 	left:0px;
 	
+}
+
+svg{
+	position:absolute;
+	float:left;
+	top:0px;
+	left:0px;
+	display: inline-block;
 }
 
 @mixin modernAnimation{
@@ -124,6 +132,14 @@ body{
 	color:red;
 }
 
+.sheen-text-base{
+	color:#fff;
+}
+#sheen2{
+	color:blue;
+}
+
+
 #sheen3{
 	color:brown;
 }
@@ -171,13 +187,8 @@ body{
 	font-family:'Helvetica';
 	font-weight:bold;
 	font-size:30px;
-	color:white;
+	//color:white;
 }
 
-.sheen-text2{
-	font-family:'Verdana';
-	font-weight:normal;
-	font-size:12px;
-	color:white;
-}
+
 

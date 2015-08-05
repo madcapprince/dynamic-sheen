@@ -77,20 +77,29 @@
 			this.sheen = document.createElement(this.options.node);
 			this.sheen.className = this.options.type + ' ' + this.options.textClass;
 			this.sheen.innerHTML = origContent;//this.options.content;
-			if (this.options.type == 'text-sheen') this.sheen.style.backgroundColor = this.options.baseColor;
+			if (this.options.type == 'text-sheen' && hasBackgroundClip()) this.sheen.style.backgroundColor = this.options.baseColor;
 			
 			sheenHolder.appendChild(this.sheen);
 			
-			this.sheen = document.createElement(this.options.node);
-			this.sheen.className = "sheen sheen-glow " + this.options.type + ' ' + this.options.textClass + ' ' + this.options.speed + ' ' + this.options.repeat;
-			if (this.options.type == 'text-sheen') this.sheen.dataset.content = this.options.content;
-			//this.sheen.innerHTML = this.options.content;
+			if (hasBackgroundClip() || this.options.type != 'text-sheen'){
+				
+				this.sheen = document.createElement(this.options.node);
+				this.sheen.className = "sheen sheen-glow " + this.options.type + ' ' + this.options.textClass + ' ' + this.options.speed + ' ' + this.options.repeat;
+				if (this.options.type == 'text-sheen') this.sheen.dataset.content = this.options.content;
 			
-			sheenHolder.appendChild(this.sheen);
+				sheenHolder.appendChild(this.sheen);
+			
+			}
 			
 			console.log("started", this.options.id); 
 		 }
 		 
+		 
+		var hasBackgroundClip = function() {
+			return document.body.style.webkitBackgroundClip != undefined;
+		};
+		 
+		
  		this.init();
 	
 

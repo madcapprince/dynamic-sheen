@@ -1,9 +1,9 @@
-/* line 3, ../sass/dynamic-sheen.scss */
+/* line 8, ../sass/dynamic-sheen.scss */
 body {
   background: black;
 }
 
-/* line 5, ../sass/dynamic-sheen.scss */
+/* line 12, ../sass/dynamic-sheen.scss */
 .sheen {
   color: white;
   /* Fallback: assume this color ON TOP of image */
@@ -12,62 +12,33 @@ body {
   float: left;
   top: 0px;
   left: 0px;
-  width: -webkit-fit-content;
 }
 
-/* line 15, ../sass/dynamic-sheen.scss */
-.sheen-text {
-  font-family: 'Helvetica';
-  font-weight: bold;
-  font-size: 30px;
-  color: white;
-}
-
-/* line 22, ../sass/dynamic-sheen.scss */
-.sheen-text2 {
-  font-family: 'Verdana';
-  font-weight: normal;
-  font-size: 12px;
-  color: white;
-}
-
-/* line 34, ../sass/dynamic-sheen.scss */
-.fallBackAnimation {
-  -webkit-animation-name: colorAnimation;
-  /* Chrome, Safari, Opera */
-  animation-name: colorAnimation;
-}
-
-/* line 39, ../sass/dynamic-sheen.scss */
+/* line 27, ../sass/dynamic-sheen.scss */
 .sheen-glow {
   color: white;
-  /*background: -webkit-linear-gradient(transparent, transparent), url(http://portfolio.queenofwhisks.com/demo/pattern/waves.gif);
-   background: -o-linear-gradient(transparent, transparent);*/
-  background: rgba(255, 255, 255, 0);
-  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 41%, white 55%, white 95%, rgba(255, 255, 255, 0) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(41%, rgba(255, 255, 255, 0)), color-stop(55%, white), color-stop(95%, white), color-stop(100%, rgba(255, 255, 255, 0)));
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 41%, white 55%, white 95%, rgba(255, 255, 255, 0) 100%);
-  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 41%, white 55%, white 95%, rgba(255, 255, 255, 0) 100%);
-  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 41%, white 55%, white 95%, rgba(255, 255, 255, 0) 100%);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 41%, #ffffff 55%, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+  background: filter-gradient(to right #00FFFFFF 0%, #00FFFFFF 41%, #99FFFFFF 55%, #99FFFFFF 95%, #00FFFFFF 100%);
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI0MSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI1NSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC42Ii8+PHN0b3Agb2Zmc2V0PSI5NSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC42Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 0% rgba(255, 255, 255, 0) 100%, 100% rgba(255, 255, 255, 0) 0%, color-stop(41%, rgba(255, 255, 255, 0)), color-stop(55%, rgba(255, 255, 255, 0.6)), color-stop(95%, rgba(255, 255, 255, 0.6)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 41%, rgba(255, 255, 255, 0.6) 55%, rgba(255, 255, 255, 0.6) 95%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 41%, rgba(255, 255, 255, 0.6) 55%, rgba(255, 255, 255, 0.6) 95%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 41%, rgba(255, 255, 255, 0.6) 55%, rgba(255, 255, 255, 0.6) 95%, rgba(255, 255, 255, 0) 100%);
   background-size: 200% 100%;
-  opacity: .8;
   background-repeat: no-repeat;
   background-position: -50% 0;
   width: auto;
 }
-/* line 69, ../sass/dynamic-sheen.scss */
+/* line 41, ../sass/dynamic-sheen.scss */
 .sheen-glow:before {
   content: attr(data-content);
   margin-right: -1%;
 }
 
-/* line 80, ../sass/dynamic-sheen.scss */
+/* line 48, ../sass/dynamic-sheen.scss */
 .hover {
   cursor: pointer;
 }
-/* line 82, ../sass/dynamic-sheen.scss */
+/* line 52, ../sass/dynamic-sheen.scss */
 .hover:hover {
   -webkit-animation-name: sheenAnimation;
   /* Chrome, Safari, Opera */
@@ -77,35 +48,42 @@ body {
   animation-iteration-count: 1;
 }
 
-/* line 91, ../sass/dynamic-sheen.scss */
-.slow {
+/* line 59, ../sass/dynamic-sheen.scss */
+.superslow {
   -webkit-animation-duration: 4s;
   /* Chrome, Safari, Opera */
   animation-duration: 4s;
 }
 
-/* line 96, ../sass/dynamic-sheen.scss */
-.fast {
+/* line 64, ../sass/dynamic-sheen.scss */
+.slow {
+  -webkit-animation-duration: 3s;
+  /* Chrome, Safari, Opera */
+  animation-duration: 3s;
+}
+
+/* line 69, ../sass/dynamic-sheen.scss */
+.medium {
   -webkit-animation-duration: 2s;
   /* Chrome, Safari, Opera */
   animation-duration: 2s;
 }
 
-/* line 101, ../sass/dynamic-sheen.scss */
-.superslow {
-  -webkit-animation-duration: 6s;
-  /* Chrome, Safari, Opera */
-  animation-duration: 6s;
-}
-
-/* line 106, ../sass/dynamic-sheen.scss */
-.superfast {
+/* line 74, ../sass/dynamic-sheen.scss */
+.fast {
   -webkit-animation-duration: 1s;
   /* Chrome, Safari, Opera */
   animation-duration: 1s;
 }
 
-/* line 111, ../sass/dynamic-sheen.scss */
+/* line 79, ../sass/dynamic-sheen.scss */
+.superfast {
+  -webkit-animation-duration: .5s;
+  /* Chrome, Safari, Opera */
+  animation-duration: .5s;
+}
+
+/* line 84, ../sass/dynamic-sheen.scss */
 .infinite {
   -webkit-animation-name: sheenAnimation;
   /* Chrome, Safari, Opera */
@@ -115,15 +93,7 @@ body {
   animation-iteration-count: infinite;
 }
 
-/* line 119, ../sass/dynamic-sheen.scss */
-.sheen-base {
-  text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-/* line 131, ../sass/dynamic-sheen.scss */
+/* line 93, ../sass/dynamic-sheen.scss */
 .text-sheen {
   background-clip: text;
   -webkit-background-clip: text;
@@ -131,54 +101,10 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* line 138, ../sass/dynamic-sheen.scss */
+/* line 101, ../sass/dynamic-sheen.scss */
 .button-sheen {
   width: 100%;
   height: 100%;
-}
-
-/* line 143, ../sass/dynamic-sheen.scss */
-.sheenButton {
-  overflow: hidden;
-  width: auto;
-  display: inline-block;
-  padding: 10px 15px;
-  background: blue;
-  font-family: Helvetica;
-  color: white;
-  border: 1px solid white;
-}
-
-/* line 154, ../sass/dynamic-sheen.scss */
-.sheenButtonRound {
-  overflow: hidden;
-  width: auto;
-  display: inline-block;
-  padding: 12px 9px;
-  background: green;
-  font-family: Helvetica;
-  font-weight: bold;
-  color: white;
-  border: 2px solid white;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-}
-
-/* line 167, ../sass/dynamic-sheen.scss */
-.sheenButtonImage {
-  overflow: hidden;
-  width: auto;
-  display: inline-block;
-  padding: 15px 58px;
-  background: url(../img/button_bg.png) no-repeat top left;
-  background-size: cover;
-  font-family: Helvetica;
-  font-weight: bold;
-  color: white;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
 }
 
 @keyframes sheenAnimation {
@@ -205,28 +131,79 @@ body {
     background-position: -100% 0%;
   }
 }
-@-webkit-keyframes colorAnimation {
-  0% {
-    color: red;
-  }
-  50% {
-    color: blue;
-  }
-  100% {
-    color: red;
-  }
-}
-/* line 201, ../sass/dynamic-sheen.scss */
-a {
-  text-decoration: none;
+/* CUSTOM DEMO GRAPHICS */
+/* line 123, ../sass/dynamic-sheen.scss */
+#sheen {
+  color: red;
 }
 
-/* line 205, ../sass/dynamic-sheen.scss */
-a .sheen {
-  *background-color: red !important;
+/* line 127, ../sass/dynamic-sheen.scss */
+#sheen3 {
+  color: brown;
 }
 
-/* line 209, ../sass/dynamic-sheen.scss */
-a #sheen-base {
-  background-color: red !important;
+/* line 131, ../sass/dynamic-sheen.scss */
+.sheenButton {
+  overflow: hidden;
+  width: auto;
+  display: inline-block;
+  padding: 10px 15px;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2FkZDhlNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDBmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #add8e6), color-stop(100%, #0000ff));
+  background: -moz-linear-gradient(#add8e6, #0000ff);
+  background: -webkit-linear-gradient(#add8e6, #0000ff);
+  background: linear-gradient(#add8e6, #0000ff);
+  font-family: Helvetica;
+  color: white;
+  border: 1px solid white;
+}
+
+/* line 142, ../sass/dynamic-sheen.scss */
+.sheenButtonRound {
+  overflow: hidden;
+  width: auto;
+  display: inline-block;
+  padding: 12px 9px;
+  background: green;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+}
+
+/* line 155, ../sass/dynamic-sheen.scss */
+.sheenButtonImage {
+  overflow: hidden;
+  width: auto;
+  display: inline-block;
+  padding: 16px 61px;
+  font-size: 15px;
+  background: url(../img/button_bg.png) no-repeat top left;
+  background-size: cover;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: white;
+  border: none;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+}
+
+/* line 170, ../sass/dynamic-sheen.scss */
+.sheen-text {
+  font-family: 'Helvetica';
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+}
+
+/* line 177, ../sass/dynamic-sheen.scss */
+.sheen-text2 {
+  font-family: 'Verdana';
+  font-weight: normal;
+  font-size: 12px;
+  color: white;
 }

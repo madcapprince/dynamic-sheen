@@ -1,6 +1,13 @@
 @import "compass";
 
-body{background:black;}
+$color: #ffffff;
+$opacity: .6;
+$color_show: rgba($color,$opacity);
+$color_hide:  rgba($color,0);
+
+body{
+	background:black;
+}
 
 .sheen{
 	color: white;  /* Fallback: assume this color ON TOP of image */
@@ -9,21 +16,7 @@ body{background:black;}
 	float:left;
 	top:0px;
 	left:0px;
-	width: -webkit-fit-content;
 	
-}
-.sheen-text{
-	font-family:'Helvetica';
-	font-weight:bold;
-	font-size:30px;
-	color:white;
-}
-
-.sheen-text2{
-	font-family:'Verdana';
-	font-weight:normal;
-	font-size:12px;
-	color:white;
 }
 
 @mixin modernAnimation{
@@ -31,106 +24,76 @@ body{background:black;}
 	animation-name: sheenAnimation;
 }
 
-.fallBackAnimation{
-	-webkit-animation-name: colorAnimation; /* Chrome, Safari, Opera */
-	animation-name: colorAnimation;
-}
-
 .sheen-glow {
 	
 	color:white;
 	
-	/*background: -webkit-linear-gradient(transparent, transparent), url(http://portfolio.queenofwhisks.com/demo/pattern/waves.gif);
-	 background: -o-linear-gradient(transparent, transparent);*/
-	 
-	background: rgba(255,255,255,0);
-	background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 41%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 95%, rgba(255,255,255,0) 100%);
-	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(41%, rgba(255,255,255,0)), color-stop(55%, rgba(255,255,255,1)), color-stop(95%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));
-	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 41%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 95%, rgba(255,255,255,0) 100%);
-	background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 41%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 95%, rgba(255,255,255,0) 100%);
-	background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 41%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 95%, rgba(255,255,255,0) 100%);
-	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 41%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 95%, rgba(255,255,255,0) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+	@include background(filter-gradient(to right ie-hex-str($color_hide) 0%,ie-hex-str($color_hide) 41%,ie-hex-str($color_show) 55%, ie-hex-str($color_show) 95%, ie-hex-str($color_hide) 100%)); // For IE
+    @include background(linear-gradient(to right $color_hide 0%,$color_hide 41%,$color_show 55%, $color_show 95%, $color_hide 100%));
 	
 	background-size: 200% 100%;
-	
-	opacity:.8;
 	
 	background-repeat:no-repeat;
 	background-position: -50% 0;
 	
 	width:auto;
-		
-	
-	
-//	visibility:hidden;
-	
 	
 	&:before{
 		content:attr(data-content);
 		margin-right:-1%;
 	}
 	
-	
-	
 }
 
-
-
 .hover{
+	
 	cursor:pointer;
+	
 	&:hover{
 		@include modernAnimation;
 		-webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
 		animation-iteration-count: 1;
-//		visibility:visible;
 	}
 }
 
-
-.slow{
+.superslow{
 	-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
 	animation-duration: 4s;
 }
 
-.fast{
+.slow{
+	-webkit-animation-duration: 3s; /* Chrome, Safari, Opera */
+	animation-duration: 3s;
+}
+
+.medium{
 	-webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
 	animation-duration: 2s;
 }
 
-.superslow{
-	-webkit-animation-duration: 6s; /* Chrome, Safari, Opera */
-	animation-duration: 6s;
-}
-
-.superfast{
+.fast{
 	-webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
 	animation-duration: 1s;
 }
 
+.superfast{
+	-webkit-animation-duration: .5s; /* Chrome, Safari, Opera */
+	animation-duration: .5s;
+}
+
 .infinite{
+	
 	@include modernAnimation;
+	
 	-webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
 	animation-iteration-count: infinite;
 	
-//	visibility:visible;
-}
-
-.sheen-base {
-	
-//	background:lightblue;
-
-	text-fill-color: transparent;
-	-webkit-text-fill-color: transparent;
-	
-	background-clip: text;
-	-webkit-background-clip: text;
-	 
 }
 
 .text-sheen{
 	background-clip: text;
 	-webkit-background-clip: text;
+	
 	text-fill-color: transparent;
 	-webkit-text-fill-color: transparent;
 }
@@ -140,12 +103,37 @@ body{background:black;}
 	height: 100%;
 }
 
+@keyframes sheenAnimation { 
+    0%,10%{background-position:200% 0%}
+    100%{background-position:-100% 0%}
+}
+
+@-webkit-keyframes sheenAnimation { 
+    0%,10%{background-position:200% 0%}
+    100%{background-position:-100% 0%}
+}
+
+@-moz-keyframes sheenAnimation { 
+    0%,10%{background-position:200% 0%}
+    100%{background-position:-100% 0%}
+}
+
+/* CUSTOM DEMO GRAPHICS */
+
+#sheen{
+	color:red;
+}
+
+#sheen3{
+	color:brown;
+}
+
 .sheenButton{
 	overflow:hidden;
 	width:auto;
 	display:inline-block;
 	padding:10px 15px;
-	background:blue;
+	@include background(linear-gradient(lightblue, blue));
 	font-family:Helvetica;
 	color:white;
 	border:1px solid white;
@@ -168,44 +156,28 @@ body{background:black;}
 	overflow:hidden;
 	width:auto;
 	display:inline-block;
-	padding: 15px 58px;
+	padding: 16px 61px;
+	font-size:15px;
 	background:url(../img/button_bg.png) no-repeat top left;
 	background-size:cover;
 	font-family:Helvetica;
 	font-weight:bold;
 	color:white;
+	border:none;
 	@include border-radius(25px);
 }
 
-@keyframes sheenAnimation { 
-    0%,10%{background-position:200% 0%}
-    100%{background-position:-100% 0%}
+.sheen-text{
+	font-family:'Helvetica';
+	font-weight:bold;
+	font-size:30px;
+	color:white;
 }
 
-@-webkit-keyframes sheenAnimation { 
-    0%,10%{background-position:200% 0%}
-    100%{background-position:-100% 0%}
+.sheen-text2{
+	font-family:'Verdana';
+	font-weight:normal;
+	font-size:12px;
+	color:white;
 }
 
-@-moz-keyframes sheenAnimation { 
-    0%,10%{background-position:200% 0%}
-    100%{background-position:-100% 0%}
-}
-
-@-webkit-keyframes colorAnimation { 
-	0% { color: red; }
-	50% { color: blue; }
-	100% { color: red; }
-}
-
-a{
-	text-decoration:none;
-}
-
-a .sheen{
-	*background-color:red!important;
-}
-
-a #sheen-base{
-	background-color:red!important;
-}

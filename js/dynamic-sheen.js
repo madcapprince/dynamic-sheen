@@ -35,8 +35,7 @@
 			textClass: '',
 			node: 'div',
 			baseColor: '#ff00cc', //color of the text under the glow
-			sheenColor: '#ffffff',
-			speed:'slow', // superfast, fast, slow, superslow
+			speed:'fast', // superfast, fast, medium, slow, superslow
 			repeat:'infinite' // 'hover' or 'infinite'
 		}
 	

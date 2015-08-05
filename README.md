@@ -3,6 +3,8 @@ Purpose
 
 Javascript Plug-in to add a sheen to text (using background-clip) or buttons/divs (shapes defined by css). Does not use jQuery.
 
+You can see it in action by viewing <a href="playground.mgallay.com/sheen">this demo</a>.
+
 
 Supported Browsers
 -----------------------------

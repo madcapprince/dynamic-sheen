@@ -3,14 +3,14 @@
 	// Define our constructor
 	this.DynamicSheen = function() {
 		
-		this.sheen = null
+		this.sheen = null;
+		this.content = '';
 		// Define option defaults
 		
 		
 		var defaults = {
 			type: 'text-sheen', //text-sheen or button-sheen
 			id: 'default',
-			content: null,
 			textClass: '',
 			node: 'div',
 			baseColor: '#ff00cc', //color of the text under the glow
@@ -41,7 +41,7 @@
 			re = new RegExp(pattern, "g");
 		
 		replacedContent = origContent.replace(re, " ");
-		this.options.content = replacedContent;
+		this.content = replacedContent;
 		
 		DynamicSheen.prototype.init = function() {
 			
@@ -63,7 +63,7 @@
 				
 				this.sheen.className = "sheen sheen-glow " + this.options.type + ' ' + this.options.textClass + ' ' + this.options.speed + ' ' + this.options.repeat;
 				
-				if (this.options.type == 'text-sheen') this.sheen.dataset.content = this.options.content;
+				if (this.options.type == 'text-sheen') this.sheen.dataset.content = this.content;
 			
 				sheenHolder.appendChild(this.sheen);
 			

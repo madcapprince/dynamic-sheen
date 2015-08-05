@@ -26,7 +26,6 @@ svg {
 /* line 35, ../sass/dynamic-sheen.scss */
 .sheen-glow {
   color: white;
-  background: filter-gradient(to right #00FFFFFF 0%, #00FFFFFF 41%, #D9FFFFFF 55%, #D9FFFFFF 95%, #00FFFFFF 100%);
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSI0MSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI1NSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC44NSIvPjxzdG9wIG9mZnNldD0iOTUlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuODUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background: -webkit-gradient(linear, 0% rgba(255, 255, 255, 0) 100%, 100% rgba(255, 255, 255, 0) 0%, color-stop(41%, rgba(255, 255, 255, 0)), color-stop(55%, rgba(255, 255, 255, 0.85)), color-stop(95%, rgba(255, 255, 255, 0.85)), color-stop(100%, rgba(255, 255, 255, 0)));
   background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 41%, rgba(255, 255, 255, 0.85) 55%, rgba(255, 255, 255, 0.85) 95%, rgba(255, 255, 255, 0) 100%);
@@ -37,17 +36,17 @@ svg {
   background-position: -50% 0;
   width: auto;
 }
-/* line 49, ../sass/dynamic-sheen.scss */
+/* line 54, ../sass/dynamic-sheen.scss */
 .sheen-glow:before {
   content: attr(data-content);
   margin-right: -1%;
 }
 
-/* line 56, ../sass/dynamic-sheen.scss */
+/* line 61, ../sass/dynamic-sheen.scss */
 .hover {
   cursor: pointer;
 }
-/* line 60, ../sass/dynamic-sheen.scss */
+/* line 65, ../sass/dynamic-sheen.scss */
 .hover:hover {
   -webkit-animation-name: sheenAnimation;
   /* Chrome, Safari, Opera */
@@ -57,42 +56,42 @@ svg {
   animation-iteration-count: 1;
 }
 
-/* line 67, ../sass/dynamic-sheen.scss */
+/* line 72, ../sass/dynamic-sheen.scss */
 .superslow {
   -webkit-animation-duration: 4s;
   /* Chrome, Safari, Opera */
   animation-duration: 4s;
 }
 
-/* line 72, ../sass/dynamic-sheen.scss */
+/* line 77, ../sass/dynamic-sheen.scss */
 .slow {
   -webkit-animation-duration: 3s;
   /* Chrome, Safari, Opera */
   animation-duration: 3s;
 }
 
-/* line 77, ../sass/dynamic-sheen.scss */
+/* line 82, ../sass/dynamic-sheen.scss */
 .medium {
   -webkit-animation-duration: 2s;
   /* Chrome, Safari, Opera */
   animation-duration: 2s;
 }
 
-/* line 82, ../sass/dynamic-sheen.scss */
+/* line 87, ../sass/dynamic-sheen.scss */
 .fast {
   -webkit-animation-duration: 1s;
   /* Chrome, Safari, Opera */
   animation-duration: 1s;
 }
 
-/* line 87, ../sass/dynamic-sheen.scss */
+/* line 92, ../sass/dynamic-sheen.scss */
 .superfast {
   -webkit-animation-duration: .5s;
   /* Chrome, Safari, Opera */
   animation-duration: .5s;
 }
 
-/* line 92, ../sass/dynamic-sheen.scss */
+/* line 97, ../sass/dynamic-sheen.scss */
 .infinite {
   -webkit-animation-name: sheenAnimation;
   /* Chrome, Safari, Opera */
@@ -102,7 +101,7 @@ svg {
   animation-iteration-count: infinite;
 }
 
-/* line 101, ../sass/dynamic-sheen.scss */
+/* line 106, ../sass/dynamic-sheen.scss */
 .text-sheen {
   background-clip: text;
   -webkit-background-clip: text;
@@ -110,7 +109,7 @@ svg {
   -webkit-text-fill-color: transparent;
 }
 
-/* line 109, ../sass/dynamic-sheen.scss */
+/* line 114, ../sass/dynamic-sheen.scss */
 .button-sheen {
   width: 100%;
   height: 100%;
@@ -141,27 +140,27 @@ svg {
   }
 }
 /* CUSTOM DEMO GRAPHICS */
-/* line 131, ../sass/dynamic-sheen.scss */
+/* line 136, ../sass/dynamic-sheen.scss */
 #sheen {
   color: red;
 }
 
-/* line 135, ../sass/dynamic-sheen.scss */
+/* line 140, ../sass/dynamic-sheen.scss */
 .sheen-text-base {
   color: #fff;
 }
 
-/* line 138, ../sass/dynamic-sheen.scss */
+/* line 143, ../sass/dynamic-sheen.scss */
 #sheen2 {
   color: blue;
 }
 
-/* line 143, ../sass/dynamic-sheen.scss */
+/* line 148, ../sass/dynamic-sheen.scss */
 #sheen3 {
   color: brown;
 }
 
-/* line 147, ../sass/dynamic-sheen.scss */
+/* line 152, ../sass/dynamic-sheen.scss */
 .sheenButton {
   overflow: hidden;
   width: auto;
@@ -177,7 +176,7 @@ svg {
   border: 1px solid white;
 }
 
-/* line 158, ../sass/dynamic-sheen.scss */
+/* line 163, ../sass/dynamic-sheen.scss */
 .sheenButtonRound {
   overflow: hidden;
   width: auto;
@@ -193,7 +192,7 @@ svg {
   border-radius: 25px;
 }
 
-/* line 171, ../sass/dynamic-sheen.scss */
+/* line 176, ../sass/dynamic-sheen.scss */
 .sheenButtonImage {
   overflow: hidden;
   width: auto;
@@ -211,7 +210,7 @@ svg {
   border-radius: 25px;
 }
 
-/* line 186, ../sass/dynamic-sheen.scss */
+/* line 191, ../sass/dynamic-sheen.scss */
 .sheen-text {
   font-family: 'Helvetica';
   font-weight: bold;

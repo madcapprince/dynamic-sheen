@@ -36,8 +36,13 @@ svg{
 	
 	color:white;
 	
-	@include background(filter-gradient(to right ie-hex-str($color_hide) 0%,ie-hex-str($color_hide) 41%,ie-hex-str($color_show) 55%, ie-hex-str($color_show) 95%, ie-hex-str($color_hide) 100%)); // For IE
-    @include background(linear-gradient(to right $color_hide 0%,$color_hide 41%,$color_show 55%, $color_show 95%, $color_hide 100%));
+	
+	// IE9 SVG, needs conditional override of 'filter' to 'none'
+	//$experimental-support-for-svg: true;
+	//@include background-image(linear-gradient(right, $color_hide 0%,$color_hide 41%,$color_show 55%, $color_show 95%, $color_hide 100%));
+	
+	@include background(linear-gradient(to right $color_hide 0%,$color_hide 41%,$color_show 55%, $color_show 95%, $color_hide 100%));
+	
 	
 	background-size: 200% 100%;
 	

@@ -1,24 +1,3 @@
-/*var DynamicSheen = {
-
-	type : 'text', // 'image'/'text'
-	shadow: false, //tf
-	
-
-	init : function(){
-		var _scope = this;
-		
-		// _scope.addHandlers();
-		
-		console.log(this);
-		
-	},
-
-	addHandlers : function(){
-	
-	}
-}*/
-
-// Create an immediately invoked functional expression to wrap our code
 (function() {
 	
 	// Define our constructor
@@ -64,9 +43,6 @@
 		replacedContent = origContent.replace(re, " ");
 		this.options.content = replacedContent;
 		
-		// console.log('this',document.getElementById(this.options.id).innerHTML)
-		
-		// function init(_) {
 		DynamicSheen.prototype.init = function() {
 			
 			var elem = document.getElementById(this.options.id);
@@ -76,7 +52,7 @@
 			var sheenHolder = document.getElementById(this.options.id);
 			this.sheen = document.createElement(this.options.node);
 			this.sheen.className = this.options.type + ' ' + this.options.textClass;
-			this.sheen.innerHTML = origContent;//this.options.content;
+			this.sheen.innerHTML = origContent;
 			if (this.options.type == 'text-sheen' && hasBackgroundClip()) this.sheen.style.backgroundColor = this.options.baseColor;
 			
 			sheenHolder.appendChild(this.sheen);
@@ -84,24 +60,23 @@
 			if (hasBackgroundClip() || this.options.type != 'text-sheen'){
 				
 				this.sheen = document.createElement(this.options.node);
+				
 				this.sheen.className = "sheen sheen-glow " + this.options.type + ' ' + this.options.textClass + ' ' + this.options.speed + ' ' + this.options.repeat;
+				
 				if (this.options.type == 'text-sheen') this.sheen.dataset.content = this.options.content;
 			
 				sheenHolder.appendChild(this.sheen);
 			
 			}
 			
-			console.log("started", this.options.id); 
-		 }
-		 
-		 
+		}
+		
 		var hasBackgroundClip = function() {
 			return document.body.style.webkitBackgroundClip != undefined;
 		};
-		 
 		
- 		this.init();
-	
+		this.init();
 
-  }
+	}
+
 }());

@@ -41,7 +41,7 @@ The following options can be used to customize the sheen:
 	
 	textClass: '' - OPTIONAL: If you want to add a class that styles the text, you can do it here.
 	
-	node: 'div' - Defaults to 'div' - You can have your sheen fall inline by using 'span'.
+	node: 'div' - Defaults to 'div' - You can have your sheen fall inline by using 'span'. If you use span, you may want to add 'nbsp;' instead of regular spaces in order to make sure the copy stays on one line.
 	
 	baseColor: '#ff00cc' - The color of the text under the glow. This is set as a background color.
 	
